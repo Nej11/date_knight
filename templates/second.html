@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date awaits</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block title %}Food Page{% endblock %}
+    {% block content %}
+    <div class ="text-box">
+        <h1>So...what you wanna eat?</h1>
+    <div class="options-row">
+        <div class="button-container">
+            <img src="{{ url_for('static', filename='images/italian.jpeg') }}" alt="Italian Food" class="button-image">
+            <a href="{{ url_for('food_page') }}"><button class="button">Eat</button></a>
+        </div>
+    
+        <div class="button-container">
+            <img src="{{ url_for('static', filename='images/walk.jpeg') }}" alt="walk" class="button-image">
+            <a href="{{ url_for('roam_page') }}"><button class="button">Roam</button></a>
+        </div>
+    
+        <div class="button-container">
+            <img src="{{ url_for('static', filename='images/arcade.jpeg') }}" alt="arcade" class="button-image">
+            <a href="{{ url_for('activities_page') }}"><button class="button">Activities</button></a>
+        </div>
+    </div>
+</div> 
+   
+    {% endblock %}
+</body>
+</html>

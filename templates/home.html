@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Knight</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <!-- Text and Buttons -->
+    <div class="text-box">
+        <h1>Art thou interested in a date?</h1>
+        <a href="{{ url_for('second_page') }}"><button class="button">Yes!</button></a>
+        <a href="{{ url_for('second_page') }}"><button class="button">Definitely yes!</button></a>
+    </div>
+{% endblock %}
+</body>
+</html>

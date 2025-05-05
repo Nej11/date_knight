@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activities huh?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}Activities Page{% endblock %}
+
+    {% block content %}
+    <div class="text-box">
+        <h1>So...what you wanna do?</h1>
+        <div class="options-row">
+            <div class="button-container">
+                <img src="{{ url_for('static', filename='images/movies.jpeg') }}" alt="movies" class="button-image">
+                <form method="POST" action="{{ url_for('select_activity') }}">
+                    <input type="hidden" name="activity_choice" value="Movies">
+                    <button type="submit" class="button">Movies</button>
+                </form>
+            </div>
+    
+            <div class="button-container">
+                <img src="{{ url_for('static', filename='images/bowling.jpeg') }}" alt="bowling" class="button-image">
+                <form method="POST" action="{{ url_for('select_activity') }}">
+                    <input type="hidden" name="activity_choice" value="Bowling">
+                    <button type="submit" class="button">Bowling</button>
+                </form>
+            </div>
+    
+            <div class="button-container">
+                <img src="{{ url_for('static', filename='images/arcade.jpeg') }}" alt="arcade" class="button-image">
+                <form method="POST" action="{{ url_for('select_activity') }}">
+                    <input type="hidden" name="activity_choice" value="Arcade/Lazer tag">
+                    <button type="submit" class="button">Arcade/Lazer tag</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roam huh?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block title %}Roam Page{% endblock %}
+
+    {% block content %}
+    <div class="text-box">
+        <h1>So...where you wanna go?</h1>
+        <div class="options-row">
+            <div class="button-container">
+                <img src="{{ url_for('static', filename='images/bookhouse.jpeg') }}" alt="bookhouse" class="button-image">
+                <form method="POST" action="{{ url_for('select_roam') }}">
+                    <input type="hidden" name="roam_choice" value="Some book store">
+                    <button type="submit" class="button">Some book store</button>
+                </form>
+            </div>
+    
+            <div class="button-container">
+                <img src="{{ url_for('static', filename='images/walk.jpeg') }}" alt="walk" class="button-image">
+                <form method="POST" action="{{ url_for('select_roam') }}">
+                    <input type="hidden" name="roam_choice" value="Walk in Kora/Lalbagh/Indiranagar">
+                    <button type="submit" class="button">Walk in Kora/Lalbagh/Indiranagar</button>
+                </form>
+            </div>
+    
+            <div class="button-container">
+                <img src="{{ url_for('static', filename='images/mall.jpeg') }}" alt="mall" class="button-image">
+                <form method="POST" action="{{ url_for('select_roam') }}">
+                    <input type="hidden" name="roam_choice" value="Chill in mall">
+                    <button type="submit" class="button">Chill in mall</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

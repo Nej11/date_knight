@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food huh?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block title %}Food Page{% endblock %}
+    {% block content %}
+    <div class="text-box">
+        <h1>So...what you wanna eat?</h1>
+        <div class="options-row">
+            <div class="button-container">
+                <img src="{{ url_for('static', filename='images/italian.jpeg') }}" alt="Italian Food" class="button-image">
+                <form method="POST" action="{{ url_for('select_food') }}">
+                    <input type="hidden" name="food_choice" value="Italian">
+                    <button type="submit" class="button">Italian</button>
+                </form>
+            </div>
+
+            <div class="button-container">
+                <img src="{{ url_for('static', filename='images/north_indian.jpeg') }}" alt="North Indian Food" class="button-image">
+                <form method="POST" action="{{ url_for('select_food') }}">
+                    <input type="hidden" name="food_choice" value="North Indian">
+                    <button type="submit" class="button">North Indian</button>
+                </form>
+            </div>
+
+            <div class="button-container">
+                <img src="{{ url_for('static', filename='images/street_food.jpeg') }}" alt="Street Food" class="button-image">
+                <form method="POST" action="{{ url_for('select_food') }}">
+                    <input type="hidden" name="food_choice" value="Street Food">
+                    <button type="submit" class="button">Street Food</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

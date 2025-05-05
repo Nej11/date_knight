@@ -1,0 +1,94 @@
+body {
+    background-image: url("images/download.jpeg");
+    background-size: cover;        /* scales image to cover entire background */
+    background-repeat: no-repeat;  /* avoids tiling */
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    color: #333;
+}
+
+.button {
+    background-color: #d0331e;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #d87777;
+    color: white;
+}
+
+.button:active {
+    background-color: #b24666;
+    box-shadow: 0 5px #b24666;
+    transform: translateY(4px);
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 100px auto; /* center horizontally with some top margin */
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* subtle shadow */
+}
+
+/* New styles for button images */
+.button-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.button-image {
+    width: 100px;  /* Adjust size as necessary */
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;  /* Space between the image and button */
+}
+
+.options-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.button-container:hover {
+    transform: scale(1.05);
+}
+
+.button-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.button-image:hover {
+    transform: scale(1.1);
+}
